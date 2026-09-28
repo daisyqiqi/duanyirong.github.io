@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>段怡蓉 · 秋招个人主页</title>
+<meta name="description" content="段怡蓉的秋招个人主页：搜索推荐算法、语音大模型、多模态感知、自动驾驶感知与控制工程背景。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%231d3557'/%3E%3Cpath d='M6 16c4-7 8 3 12-4M7 8h10' stroke='%23f4a261' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap">
+<style>
+:root{
+  --paper:#f7f4ee;
+  --surface:#fffdf8;
+  --ink:#1d2433;
+  --muted:#5d6678;
+  --soft:#858fa0;
+  --navy:#1d3557;
+  --teal:#2a9d8f;
+  --clay:#e76f51;
+  --gold:#f4a261;
+  --line:#ddd6c9;
+  --line-strong:#cfc5b6;
+  --radius:8px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Noto Sans SC','Microsoft YaHei',system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--gold);color:var(--navy)}
+.container{max-width:1120px;margin:0 auto;padding:0 28px}
+.mono,.num{font-variant-numeric:tabular-nums}
+
+.nav{
+  position:sticky;top:0;z-index:20;
+  background:rgba(247,244,238,.88);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand{font-weight:800;color:var(--navy);font-size:18px}
+.brand span{color:var(--clay)}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{font-size:14px;color:var(--muted);font-weight:500}
+.nav-links a:hover{color:var(--navy)}
+.nav-links .cta{
+  color:#fff;
+  background:var(--navy);
+  padding:7px 15px;
+  border-radius:999px;
+}
+.nav-links .cta:hover{background:var(--teal);color:#fff}
+
+.hero{
+  padding:86px 0 62px;
+  border-bottom:1px solid var(--line);
+  background:
+    linear-gradient(120deg, rgba(29,53,87,.06), rgba(42,157,143,.04) 48%, rgba(231,111,81,.06)),
+    var(--paper);
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.16fr) minmax(320px,.84fr);
+  gap:54px;
+  align-items:center;
+}
+.kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--teal);
+  font-size:14px;
+  font-weight:700;
+  margin-bottom:18px;
+}
+.kicker::before{content:"";width:30px;height:2px;background:var(--teal)}
+h1{
+  color:var(--navy);
+  font-size:58px;
+  line-height:1.16;
+  font-weight:900;
+  letter-spacing:0;
+  margin-bottom:22px;
+}
+h1 span{color:var(--clay)}
+.tagline{
+  max-width:62ch;
+  color:var(--muted);
+  font-size:18px;
+  margin-bottom:30px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:9px 17px;
+  border-radius:999px;
+  border:1px solid var(--line-strong);
+  color:var(--navy);
+  font-weight:700;
+  font-size:14px;
+}
+.btn.primary{background:var(--navy);border-color:var(--navy);color:#fff}
+.btn:hover{border-color:var(--teal);color:var(--teal)}
+.btn.primary:hover{background:var(--teal);color:#fff}
+.hero-stats{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+.stat{
+  border-left:3px solid var(--gold);
+  padding:4px 0 4px 14px;
+}
+.stat strong{
+  display:block;
+  font-size:25px;
+  color:var(--navy);
+  line-height:1.2;
+}
+.stat span{color:var(--soft);font-size:13px}
+
+.visual{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px;
+  box-shadow:0 18px 45px rgba(64,55,42,.08);
+}
+.visual-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:18px;
+}
+.visual-title b{color:var(--navy);font-size:15px}
+.profile-board{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:#fffaf0;
+  overflow:hidden;
+}
+.profile-main{
+  display:grid;
+  grid-template-columns:132px 1fr;
+  gap:18px;
+  align-items:center;
+  padding:20px;
+  border-bottom:1px solid var(--line);
+}
+.profile-mark{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  aspect-ratio:1;
+  border-radius:50%;
+  background:conic-gradient(from 210deg, var(--teal), var(--gold), var(--clay), var(--teal));
+  color:#fff;
+  text-align:center;
+  box-shadow:0 12px 24px rgba(29,53,87,.12);
+}
+.profile-mark b{font-size:26px;line-height:1}
+.profile-mark span{font-size:12px;margin-top:6px;font-weight:700}
+.profile-copy h3{
+  color:var(--navy);
+  font-size:21px;
+  line-height:1.35;
+  margin-bottom:8px;
+}
+.profile-copy p{color:var(--muted);font-size:14px}
+.focus-list{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+}
+.focus{
+  padding:16px;
+  border-right:1px solid var(--line);
+}
+.focus:last-child{border-right:0}
+.focus .k{
+  color:var(--teal);
+  font-size:12px;
+  font-weight:800;
+  margin-bottom:5px;
+}
+.focus b{display:block;color:var(--navy);font-size:15px;margin-bottom:4px}
+.focus span{display:block;color:var(--muted);font-size:12px;line-height:1.55}
+.pipeline{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-top:14px;
+}
+.pipe{
+  background:#f4efe5;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:12px;
+}
+.pipe b{display:block;color:var(--navy);font-size:14px;margin-bottom:2px}
+.pipe span{font-size:12px;color:var(--muted)}
+
+.section{padding:74px 0;border-bottom:1px solid var(--line)}
+.sec-head{
+  display:flex;
+  align-items:baseline;
+  gap:13px;
+  margin-bottom:34px;
+}
+.sec-head .no{color:var(--clay);font-weight:800;font-size:14px}
+.sec-head h2{font-size:30px;color:var(--navy);line-height:1.3}
+.sec-head .en{color:var(--soft);font-size:13px;text-transform:uppercase}
+
+.timeline{display:grid;gap:22px}
+.tl-row{
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:24px;
+}
+.tl-time{
+  color:var(--muted);
+  font-size:14px;
+  padding-top:4px;
+}
+.tl-body{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px;
+}
+.tl-body h3{font-size:18px;color:var(--navy);margin-bottom:2px}
+.org{color:var(--teal);font-size:14px;font-weight:700;margin-bottom:12px}
+.tl-body p{color:var(--muted);font-size:15px;margin-bottom:10px}
+.bullets{list-style:none;display:grid;gap:8px}
+.bullets li{position:relative;padding-left:18px;color:var(--ink);font-size:14.5px}
+.bullets li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.72em;
+  width:7px;
+  height:7px;
+  background:var(--gold);
+  border-radius:2px;
+}
+.bullets b{color:var(--clay);font-weight:800}
+
+.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px;
+}
+.card h3{font-size:18px;color:var(--navy);margin-bottom:8px}
+.tag{
+  display:inline-flex;
+  color:var(--teal);
+  font-weight:800;
+  font-size:12px;
+  margin-bottom:10px;
+}
+.card p{color:var(--muted);font-size:14.5px}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.stack span{
+  border:1px solid var(--line);
+  background:#f4efe5;
+  color:var(--navy);
+  border-radius:999px;
+  padding:3px 9px;
+  font-size:12px;
+  font-weight:700;
+}
+
+.skill-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.skill-list{display:grid;gap:12px}
+.skill-row{
+  display:grid;
+  grid-template-columns:112px 1fr;
+  gap:14px;
+  align-items:start;
+  padding:16px;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+}
+.skill-row b{color:var(--navy)}
+.skill-row span{color:var(--muted);font-size:14px}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.panel{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px;
+}
+.panel h3{color:var(--navy);font-size:18px;margin-bottom:12px}
+.item{padding:11px 0;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:0;padding-bottom:0}
+.item .when{color:var(--soft);font-size:13px}
+.item .what{color:var(--ink);font-size:14.5px}
+.item b{color:var(--teal)}
+
+.contact{
+  background:linear-gradient(120deg, rgba(42,157,143,.08), rgba(244,162,97,.12)), var(--paper);
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+}
+.contact-item{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:18px;
+}
+.contact-item .k{color:var(--soft);font-size:13px;margin-bottom:4px}
+.contact-item .v{
+  color:var(--navy);
+  font-weight:800;
+  font-size:15px;
+  overflow-wrap:anywhere;
+}
+.contact-item a{color:var(--teal)}
+
+footer{padding:28px 0;color:var(--soft);font-size:13px}
+.foot-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media(max-width:820px){
+  .nav-links{display:none}
+  .hero{padding:62px 0 48px}
+  .hero-grid,.tl-row,.project-grid,.skill-layout,.edu-grid{grid-template-columns:1fr}
+  h1{font-size:40px}
+  .hero-stats,.pipeline,.contact-grid,.profile-main,.focus-list{grid-template-columns:1fr}
+  .focus{border-right:0;border-bottom:1px solid var(--line)}
+  .focus:last-child{border-bottom:0}
+  .profile-mark{width:132px;justify-self:center}
+  .visual{padding:16px}
+  .section{padding:58px 0}
+  .skill-row{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top">段怡蓉<span>.</span></a>
+    <div class="nav-links">
+      <a href="#experience">实习经历</a>
+      <a href="#projects">项目科研</a>
+      <a href="#skills">技术栈</a>
+      <a href="#education">教育荣誉</a>
+      <a class="cta" href="#contact">联系我</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">2027 届秋招 · 算法工程师</div>
+      <h1>段怡蓉<br>面向<span>推荐、语音与多模态感知</span>的算法实践者</h1>
+      <p class="tagline">
+        北京航空航天大学控制科学与工程硕士，武汉大学自动化本科。具备广告搜索推荐、语音生成、自动驾驶感知与智能座舱多模态模型的算法经历，关注模型效果、工程落地与端侧部署稳定性。
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#experience">查看经历</a>
+        <a class="btn" href="mailto:duanyirong@buaa.edu.cn">发送邮件</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>3</strong><span>段算法相关实习</span></div>
+        <div class="stat"><strong>616</strong><span>CET-6 英语成绩</span></div>
+        <div class="stat"><strong>1</strong><span>项授权发明专利</span></div>
+      </div>
+    </div>
+    <div class="visual" aria-label="算法能力概览">
+      <div class="visual-title"><b>Algorithm Profile</b></div>
+      <div class="profile-board">
+        <div class="profile-main">
+          <div class="profile-mark"><b>AI</b><span>算法工程</span></div>
+          <div class="profile-copy">
+            <h3>从模型训练到端侧落地的算法实践</h3>
+            <p>以推荐排序、语音生成和智能座舱多模态感知为主线，关注特征建模、训练稳定性、效果评测与部署效率。</p>
+          </div>
+        </div>
+        <div class="focus-list">
+          <div class="focus">
+            <div class="k">01 · 推荐排序</div>
+            <b>LTR / 多塔模型</b>
+            <span>User、Item、Context 与创意特征融合，支撑粗排匹配。</span>
+          </div>
+          <div class="focus">
+            <div class="k">02 · 语音生成</div>
+            <b>GPT-SoVITS</b>
+            <span>DPO、GAN、量化与蒸馏，面向车端低延迟生成。</span>
+          </div>
+          <div class="focus">
+            <div class="k">03 · 多模态感知</div>
+            <b>Qwen-VL / BEV</b>
+            <span>座舱视觉理解、BEV 地图元素识别与场景推理。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="experience">
+  <div class="container">
+    <div class="sec-head"><span class="no">01</span><h2>实习经历</h2><span class="en">Experience</span></div>
+    <div class="timeline">
+      <div class="tl-row">
+        <div class="tl-time">2026.07 - 2026.09</div>
+        <div class="tl-body">
+          <h3>搜索推荐算法工程师</h3>
+          <div class="org">拼多多（上海）</div>
+          <p>围绕推荐粗排任务，参与多塔 Pairwise LTR模型和创意粗排模型的搭建、训练与优化。</p>
+          <ul class="bullets">
+            <li>设计并实现多塔 LTR 粗排模型，构建 User、Item、Context、User-Item Interaction、User Category Behavior、Cross Feature 等 <b>7 个编码塔</b>，通过 MLP Fusion 融合多源特征。包含SENet特征重标定机制，进行特征组自适应权重学习，增强关键特征表达，离线AUC达到 <b>0.9745</b>，AB-test上线三天订单量增加<b>0.10%</b>。</li>
+            <li>引入 Product Quantization、VQ-VAE 实现商品 embedding 压缩，支持十亿级商品向量 64x 压缩。</li>
+            <li>构建商品-创意粒度的粗排模型，引入 Creative Tower 对广告图片（（创意）进行特征提取，使用Creative特征增强Goods特征，结合User Tower和Goods Tower建模用户兴趣、商品语义与创意表达之间的匹配关系，实现同一商品下多创意素材的个性化排序。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time">2026.02 - 2026.05</div>
+        <div class="tl-body">
+          <h3>智能座舱语音算法工程师</h3>
+          <div class="org">岚图汽车科技有限公司（北京）</div>
+          <p>参与基于 GPT-SoVITS 的车载语音大模型生成系统搭建、训练、评测、压缩与部署验证。</p>
+          <ul class="bullets">
+            <li>完成 GPT-SoVITS 两阶段训练：使用 DPO 完成 GPT 文本到语义离散 token 训练，使用 GAN 完成 SoVITS 训练，支持品牌特色音色复刻。</li>
+            <li>针对音频长度导致的 semantic 类别不平衡进行优化，改善 T2S 模型预测停止与停顿表现。</li>
+            <li>完成 T2S 与 VITS 模型 fp32 / fp16 到 int8 动态量化，并进行 ONNX 一致性验证，提升车端兼容性与运行稳定性。</li>
+            <li>对 VITS decoder 模块进行压缩，通过主客观 MOS 确定压缩方案，蒸馏模型以 RTF 降低至<b>1.1</b>和端侧语音生成延迟。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time">2025.07 - 2025.10</div>
+        <div class="tl-body">
+          <h3>视觉算法工程师</h3>
+          <div class="org">经纬恒润科技股份有限公司（北京）</div>
+          <p>参与自动驾驶高精地图绘制与智能座舱多模态感知大模型优化，覆盖数据处理、模型训练、推理验证和结果分析。</p>
+          <ul class="bullets">
+            <li>基于 MapTR 搭建 BEV 感知的矢量化车道级地图识别系统，完成车道线、路沿、停止线、人行道、交通箭头等地图元素识别与建模。</li>
+            <li>优化 BEV 特征提取网络与数据增强策略，提升关键地图元素识别准确率与稳定性。</li>
+            <li>基于 Qwen2.5-VL 完成智能座舱视觉语言模型 SFT 微调，设计 Image-Instruction-Response 数据 pipeline。</li>
+            <li>模型具备驾驶员疲劳、分心行为与车内环境等场景的视觉理解和自然语言推理能力，在自建测试集准确率提升 <b>4.7%</b>。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="container">
+    <div class="sec-head"><span class="no">02</span><h2>项目与科研经历</h2><span class="en">Projects</span></div>
+    <div class="project-grid">
+      <div class="card">
+        <span class="tag">国家发明专利 · 已授权</span>
+        <h3>基于惯性导航技术的车辆载重测量系统</h3>
+        <p>参与车辆载重测量系统设计，完成传感器数据分析、算法验证和实车实验；参与系统建模与整体方案设计，并负责专利撰写相关工作。</p>
+        <div class="stack"><span>惯性导航</span><span>传感器数据分析</span><span>系统建模</span><span>实车实验</span></div>
+      </div>
+      <div class="card">
+        <span class="tag">科研团队 · 负责人经历</span>
+        <h3>创新训练与算法工程实践</h3>
+        <p>科研团队曾入驻武汉大学训创中心，担任团队主要负责人；在多项数学建模竞赛、机器人和创新创业竞赛中承担方案设计、任务协调与结果交付。</p>
+        <div class="stack"><span>团队协作</span><span>方案设计</span><span>数学建模</span><span>工程验证</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="container">
+    <div class="sec-head"><span class="no">03</span><h2>技术栈与能力画像</h2><span class="en">Skills</span></div>
+    <div class="skill-layout">
+      <div class="skill-list">
+        <div class="skill-row"><b>编程语言</b><span>Python、C/C++、SQL、Matlab，熟悉 Shell 脚本与 Linux 命令，能熟练编写和调试程序完成算法研发与工程任务。</span></div>
+        <div class="skill-row"><b>算法建模</b><span>LTR、多塔推荐模型、生成式推荐、Duffsion Model、GPT-SoVITS、BEVFormer、MapTr、Qwen2.5-VL 。</span></div>
+        <div class="skill-row"><b>模型训练</b><span>PyTorch、TensorFlow、Hugging Face Transformers、SFT、DPO、GAN，以及数据 pipeline 设计。</span></div>
+      </div>
+      <div class="skill-list">
+        <div class="skill-row"><b>工程落地</b><span>Git、Linux、ONNX 一致性验证、模型量化、端侧部署、推理稳定性优化。</span></div>
+        <div class="skill-row"><b>业务理解</b><span>覆盖搜索推荐、智能座舱语音、多模态交互、自动驾驶地图生成等多业务场景。</span></div>
+        <div class="skill-row"><b>协作推进</b><span>具备跨部门协作、需求对齐、PRD 撰写和团队目标推进经验，表达逻辑清晰。</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="education">
+  <div class="container">
+    <div class="sec-head"><span class="no">04</span><h2>教育背景与荣誉</h2><span class="en">Education</span></div>
+    <div class="edu-grid">
+      <div class="panel">
+        <h3>教育背景</h3>
+        <div class="item"><div class="when">2024.09 - 2027.06</div><div class="what">北京航空航天大学 · 控制科学与工程 <b>硕士</b></div></div>
+        <div class="item"><div class="when">2020.09 - 2024.06</div><div class="what">武汉大学 · 自动化 <b>本科</b></div></div>
+        <div class="item"><div class="when">核心课程</div><div class="what">数据结构 99、自动控制原理 99、计算机控制 96、矩阵理论 98、最优化理论 88。</div></div>
+      </div>
+      <div class="panel">
+        <h3>荣誉奖项</h3>
+        <div class="item"><div class="when">2024 - 2026</div><div class="what">北京航空航天大学校级三好学生、校级优秀研究生、校级优秀学生干部。</div></div>
+        <div class="item"><div class="when">2021 - 2024</div><div class="what">武汉大学校级优秀学生干部、校级优秀学生、中能电气企业奖学金。</div></div>
+        <div class="item"><div class="when">竞赛经历</div><div class="what">互联网+ 湖北省银奖、美国大学生数学建模竞赛 M 奖、湖北省大学生电工数学建模竞赛一等奖等。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="leadership">
+  <div class="container">
+    <div class="sec-head"><span class="no">05</span><h2>学生工作与综合素质</h2><span class="en">Leadership</span></div>
+    <div class="project-grid">
+      <div class="card">
+        <span class="tag">北航</span>
+        <h3>长期从事校级学生工作</h3>
+        <p>现任自动化科学与电气工程学院 2025 级硕士学生辅导员，学院权益中心副主任，有优秀的沟通能力和良好的沟通表达与跨部门协作能力，能高效推进团队目标，快速对齐需求，保障项目顺利落地，沟通逻辑清晰。</p>
+      </div>
+      <div class="card">
+        <span class="tag">武大</span>
+        <h3>长期从事学院学生工作</h3>
+        <p>2021-2024 学年担任武汉大学自动化学习委员，积累了稳定的组织沟通、信息同步和跨角色协作经验，能够高效推进团队目标。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="sec-head"><span class="no">06</span><h2>联系方式</h2><span class="en">Contact</span></div>
+    <div class="contact-grid">
+      <div class="contact-item"><div class="k">邮箱</div><div class="v"><a href="mailto:duanyirong@buaa.edu.cn">duanyirong@buaa.edu.cn</a></div></div>
+      <div class="contact-item"><div class="k">电话 / 微信</div><div class="v"><a href="tel:13919247568">13919247568</a></div></div>
+      <div class="contact-item"><div class="k">学历</div><div class="v">北航硕士 · 2027 届</div></div>
+      <div class="contact-item"><div class="k">求职方向</div><div class="v">推荐算法 / 语音大模型 / 多模态感知 / 自动驾驶感知 算法工程师</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container foot-inner">
+    <span>段怡蓉 · 2027 届秋招个人主页</span>
+    <span>推荐算法 / 语音大模型 / 多模态感知 / 自动驾驶感知</span>
+  </div>
+</footer>
+</body>
+</html>
