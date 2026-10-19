@@ -377,7 +377,7 @@ footer{padding:28px 0;color:var(--soft);font-size:13px}
   <div class="container hero-grid">
     <div>
       <div class="kicker">2027 届秋招 · 算法工程师</div>
-      <h1>段怡蓉<br>面向<span>推荐、语音与多模态感知</span>的算法</h1>
+      <h1>段怡蓉<br>面向<span>推荐、语音与多模态感知</span>的算法实践者</h1>
       <p class="tagline">
         北京航空航天大学控制科学与工程硕士，武汉大学自动化本科。具备广告搜索推荐、语音生成、自动驾驶感知与智能座舱多模态模型的算法经历，关注模型效果、工程落地与端侧部署稳定性。
       </p>
@@ -408,9 +408,9 @@ footer{padding:28px 0;color:var(--soft);font-size:13px}
             <span>User、Item、Context 与创意特征融合，支撑粗排匹配。</span>
           </div>
           <div class="focus">
-            <div class="k">02 · 语音生成</div>
-            <b>GPT-SoVITS</b>
-            <span>DPO、GAN、量化与蒸馏，面向车端低延迟生成。</span>
+            <div class="k">02 · 语音生成·评测</div>
+            <b>GPT-SoVITS / Agent</b>
+            <span>DPO、GAN、量化与蒸馏，评测Agent推动模型优化。</span>
           </div>
           <div class="focus">
             <div class="k">03 · 多模态感知</div>
@@ -436,7 +436,7 @@ footer{padding:28px 0;color:var(--soft);font-size:13px}
           <ul class="bullets">
             <li>设计并实现多塔 LTR 粗排模型，构建 User、Item、Context、User-Item Interaction、User Category Behavior、Cross Feature 等 <b>7 个编码塔</b>，通过 MLP Fusion 融合多源特征。包含SENet特征重标定机制，进行特征组自适应权重学习，增强关键特征表达，离线AUC达到 <b>0.9745</b>，AB-test上线三天订单量增加<b>0.10%</b>。</li>
             <li>引入 Product Quantization、VQ-VAE 实现商品 embedding 压缩，支持十亿级商品向量 64x 压缩。</li>
-            <li>构建商品-创意粒度的粗排模型，引入 Creative Tower 对广告图片（（创意）进行特征提取，使用Creative特征增强Goods特征，结合User Tower和Goods Tower建模用户兴趣、商品语义与创意表达之间的匹配关系，实现同一商品下多创意素材的个性化排序。</li>
+            <li>构建基于AIGC的商品-创意粒度的粗排模型，面向 AIGC 生成的商品广告创意，构建商品—创意粒度的个性化粗排模型，引入 Creative Tower 提取创意视觉语义特征，与 Goods Tower、User Tower 联合建模用户兴趣、商品语义及创意表达之间的匹配关系；通过多源特征融合与排序目标优化，区分同一商品下不同创意的用户偏好，实现商品级到商品—创意级的精细化候选排序。</li>
           </ul>
         </div>
       </div>
@@ -445,12 +445,12 @@ footer{padding:28px 0;color:var(--soft);font-size:13px}
         <div class="tl-body">
           <h3>智能座舱语音算法工程师</h3>
           <div class="org">岚图汽车科技有限公司（北京）</div>
-          <p>参与基于 GPT-SoVITS 的车载语音大模型生成系统搭建、训练、评测、压缩与部署验证。</p>
+          <p>参与基于 GPT-SoVITS 的车载语音大模型生成系统搭建、训练、评测、压缩与部署，开发语音合成评测Agent，评测结果推动模型迭代。</p>
           <ul class="bullets">
-            <li>完成 GPT-SoVITS 两阶段训练：使用 DPO 完成 GPT 文本到语义离散 token 训练，使用 GAN 完成 SoVITS 训练，支持品牌特色音色复刻。</li>
-            <li>针对音频长度导致的 semantic 类别不平衡进行优化，改善 T2S 模型预测停止与停顿表现。</li>
-            <li>完成 T2S 与 VITS 模型 fp32 / fp16 到 int8 动态量化，并进行 ONNX 一致性验证，提升车端兼容性与运行稳定性。</li>
-            <li>对 VITS decoder 模块进行压缩，通过主客观 MOS 确定压缩方案，蒸馏模型以 RTF 降低至<b>1.1</b>和端侧语音生成延迟。</li>
+            <li>完成 GPT-SoVITS 两阶段训练：使用 DPO 完成 GPT 文本到语义离散 token 训练，使用 GAN 完成 SoVITS 训练，支持品牌特色音色复刻。解决音频长度导致的 semantic 类别不平衡，改善 T2S 模型预测停止与停顿表现。</li>
+            <li>面向智能座舱语音生成模型的训练、部署与迭代需求，设计覆盖音色复刻、语音自然度、停顿表现、推理延迟和端侧稳定性的模型评测方案，梳理从测试样本生成、批量推理到结果分析的评测流程。</li>
+            <li>搭建语音模型自动化评测Agent，结合主观 MOS 评价、客观音频指标、RTF、生成时延和 ONNX 一致性验证，对 GPT-SoVITS 的 T2S 与 VITS 模块进行多维度效果评估，定位语义类别不平衡、预测停止异常和音色复刻效果下降等问题。</li>
+            <li>基于评测结果推动模型迭代，参与动态量化、decoder 压缩与知识蒸馏方案评估，在保证语音生成质量和音色一致性的基础上，降低端侧推理延迟并提升模型部署稳定性。</li>
           </ul>
         </div>
       </div>
@@ -555,7 +555,7 @@ footer{padding:28px 0;color:var(--soft);font-size:13px}
       <div class="contact-item"><div class="k">邮箱</div><div class="v"><a href="mailto:duanyirong@buaa.edu.cn">duanyirong@buaa.edu.cn</a></div></div>
       <div class="contact-item"><div class="k">电话 / 微信</div><div class="v"><a href="tel:13919247568">13919247568</a></div></div>
       <div class="contact-item"><div class="k">学历</div><div class="v">北航硕士 · 2027 届</div></div>
-      <div class="contact-item"><div class="k">求职方向</div><div class="v">推荐算法 / 语音大模型 / 多模态感知 / 自动驾驶感知 算法工程师</div></div>
+      <div class="contact-item"><div class="k">求职方向</div><div class="v">推荐算法 / LLM / Agent/ 多模态感知 / 自动驾驶感知 算法工程师</div></div>
     </div>
   </div>
 </section>
@@ -563,7 +563,7 @@ footer{padding:28px 0;color:var(--soft);font-size:13px}
 <footer>
   <div class="container foot-inner">
     <span>段怡蓉 · 2027 届秋招个人主页</span>
-    <span>推荐算法 / 语音大模型 / 多模态感知 / 自动驾驶感知</span>
+    <span>推荐算法 /  LLM / Agent / 语音大模型 / 多模态感知 / 自动驾驶感知</span>
   </div>
 </footer>
 </body>
